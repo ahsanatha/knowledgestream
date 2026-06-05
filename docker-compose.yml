@@ -1,8 +1,8 @@
 services:
   knowledgestream:
     build: .
-    ports:
-      - "8080:8080"
+    expose:
+      - "8080"
     environment:
       - REDIS_ADDR=redis:6379
       - SSE_URL=https://stream.wikimedia.org/v2/stream/mediawiki.recentchange,page-create,page-links-change,recentchange,mediawiki.page-links-change
@@ -23,8 +23,8 @@ services:
 
   redis:
     image: redis:7-alpine
-    ports:
-      - "6379:6379"
+    expose:
+      - "6379"
     healthcheck:
       test: ["CMD", "redis-cli", "ping"]
       interval: 5s
