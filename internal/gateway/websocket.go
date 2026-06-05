@@ -204,6 +204,7 @@ func (g *Gateway) Broadcast(change normalize.KnowledgeChange, score float64, wik
 			}
 		}(client)
 	}
+	log.Printf("broadcast: sent change %q to %d clients", change.Title, len(clients))
 }
 
 func (g *Gateway) cleanupClient(clientID string) {
