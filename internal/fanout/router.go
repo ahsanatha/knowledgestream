@@ -4,8 +4,8 @@ import (
 	"log"
 	"sync"
 
-	"github.com/ahsanknowledge/knowledgestream/internal/normalize"
-	"github.com/ahsanknowledge/knowledgestream/internal/volatility"
+	"github.com/ahsanatha/knowledgestream/internal/normalize"
+	"github.com/ahsanatha/knowledgestream/internal/volatility"
 )
 
 type RouteMessage struct {

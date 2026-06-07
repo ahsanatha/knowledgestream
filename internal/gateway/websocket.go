@@ -8,8 +8,8 @@ import (
 	"sync"
 	"time"
 
-	"github.com/ahsanknowledge/knowledgestream/internal/fanout"
-	"github.com/ahsanknowledge/knowledgestream/internal/normalize"
+	"github.com/ahsanatha/knowledgestream/internal/fanout"
+	"github.com/ahsanatha/knowledgestream/internal/normalize"
 	"github.com/gorilla/websocket"
 )
 
@@ -194,6 +194,10 @@ func (g *Gateway) Broadcast(change normalize.KnowledgeChange, score float64, wik
 		clients = append(clients, c)
 	}
 	g.mu.RUnlock()
+
+	if len(clients) == 0 {
+		return
+	}
 
 	for _, client := range clients {
 		go func(c *Client) {

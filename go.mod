@@ -1,4 +1,4 @@
-module github.com/ahsanknowledge/knowledgestream
+module github.com/ahsanatha/knowledgestream
 
 go 1.26.2
 

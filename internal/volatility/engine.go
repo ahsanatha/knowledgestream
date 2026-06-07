@@ -12,8 +12,8 @@ import (
 	"sync/atomic"
 	"time"
 
-	"github.com/ahsanknowledge/knowledgestream/internal/normalize"
-	"github.com/ahsanknowledge/knowledgestream/internal/ranking"
+	"github.com/ahsanatha/knowledgestream/internal/normalize"
+	"github.com/ahsanatha/knowledgestream/internal/ranking"
 	"github.com/axiomhq/hyperloglog"
 )
 

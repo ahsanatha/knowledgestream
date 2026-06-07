@@ -5,14 +5,14 @@ import (
 	"fmt"
 	"log"
 
-	"github.com/ahsanknowledge/knowledgestream/internal/normalize"
+	"github.com/ahsanatha/knowledgestream/internal/normalize"
 	"github.com/r3labs/sse/v2"
 )
 
 func WikimediaStream(ctx context.Context, url string, norm *normalize.Normalizer, out chan<- normalize.KnowledgeChange) error {
 	client := sse.NewClient(url)
 	client.Headers = map[string]string{
-		"User-Agent": "KnowledgeStream/1.0 (https://github.com/ahsanknowledge/knowledgestream; demo)",
+		"User-Agent": "KnowledgeStream/1.0 (https://github.com/ahsanatha/knowledgestream; demo)",
 	}
 
 	events := make(chan *sse.Event)

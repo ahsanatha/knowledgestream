@@ -9,12 +9,12 @@ import (
 	"syscall"
 	"time"
 
-	"github.com/ahsanknowledge/knowledgestream/internal/fanout"
-	"github.com/ahsanknowledge/knowledgestream/internal/gateway"
-	"github.com/ahsanknowledge/knowledgestream/internal/ingest"
-	"github.com/ahsanknowledge/knowledgestream/internal/normalize"
-	"github.com/ahsanknowledge/knowledgestream/internal/ranking"
-	"github.com/ahsanknowledge/knowledgestream/internal/volatility"
+	"github.com/ahsanatha/knowledgestream/internal/fanout"
+	"github.com/ahsanatha/knowledgestream/internal/gateway"
+	"github.com/ahsanatha/knowledgestream/internal/ingest"
+	"github.com/ahsanatha/knowledgestream/internal/normalize"
+	"github.com/ahsanatha/knowledgestream/internal/ranking"
+	"github.com/ahsanatha/knowledgestream/internal/volatility"
 )
 
 func main() {
