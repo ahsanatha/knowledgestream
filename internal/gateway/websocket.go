@@ -96,6 +96,8 @@ func (g *Gateway) HandleWebSocket(w http.ResponseWriter, r *http.Request) {
 			g.handleSubscribe(clientID, msg.Topics)
 		case "unsubscribe":
 			g.handleUnsubscribe(clientID, msg.Topics)
+		case "pong":
+			// keep-alive reply from client — no-op
 		default:
 			log.Printf("client %s unknown message type: %s", clientID, msg.Type)
 		}
