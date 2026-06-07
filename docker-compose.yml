@@ -1,8 +1,8 @@
 services:
   knowledgestream:
     build: .
-    ports:
-      - "8080:8080"
+    expose:
+      - "8080"
     environment:
       - REDIS_ADDR=redis:6379
       - SSE_URL=https://stream.wikimedia.org/v2/stream/mediawiki.recentchange,page-create,page-links-change,recentchange,mediawiki.page-links-change
